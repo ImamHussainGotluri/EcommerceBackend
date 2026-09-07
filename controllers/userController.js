@@ -8,6 +8,7 @@ const JWT_SECRET = process.env.JWT_SECRET;
 //login user
 const loginUser = async (req, res) => {
   try {
+    console.log("[loginUser] req.body:", req.body);
     const { email, password } = req.body;
     if (!email || !password) {
       return res
@@ -44,6 +45,7 @@ const loginUser = async (req, res) => {
 //register user
 const registerUser = async (req, res) => {
   try {
+    console.log("[registerUser] req.body:", req.body);
     const { email, password, name } = req.body;
     if (!name || !email || !password) {
       return res
